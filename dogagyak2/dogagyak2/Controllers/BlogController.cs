@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using MySql.Data.MySqlClient;
 using dogagyak2.Models;
+using System.Reflection.PortableExecutable;
 
 namespace dogagyak2.Controllers
 {
@@ -79,5 +80,50 @@ namespace dogagyak2.Controllers
 
             return Ok("siker");
         }
+        [HttpDelete("{id}")]
+        public IActionResult Delete(Guid id)
+        {
+
+
+            conn.Connection.Open();
+
+            string sql = "DELETE FROM `blogosok` WHERE id = @id;";
+
+            MySqlCommand cmd = new MySqlCommand(sql, conn.Connection);
+            cmd.Parameters.AddWithValue("@id", id);
+     
+
+            cmd.ExecuteNonQuery();
+            conn.Connection.Close();
+
+            return Ok("siker");
+        }
+        /*[HttpGet("{id}")]
+        public IActionResult Get(Guid id)
+        {
+
+
+            conn.Connection.Open();
+
+            string sql = "SELECT * FROM `blogosok` WHERE id = @id";
+
+            MySqlCommand cmd = new MySqlCommand(sql, conn.Connection);
+            cmd.Parameters.AddWithValue("@id", id);
+            MySqlDataReader reader = cmd.ExecuteReader();
+
+            reader.Read();
+            var data = new Blogog()
+            {
+                id = reader.GetGuid("id"),
+                Title = reader.GetString("Title"),
+                Description = reader.GetString("Description"),
+                CreatedTime = reader.GetDateTime("CreatedTime"),
+                Lastupdated = reader.GetDateTime("Lastupdated"),
+            };
+                
+            conn.Connection.Close();
+
+            return Ok(data);
+        }*/
     }
 }

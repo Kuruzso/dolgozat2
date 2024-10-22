@@ -55,5 +55,37 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "dogagyak2.Controllers.BlogController",
+    "Method": "Delete",
+    "RelativePath": "Blogog/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "dogagyak2.Controllers.BlogController",
+    "Method": "Get",
+    "RelativePath": "Blogog/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
