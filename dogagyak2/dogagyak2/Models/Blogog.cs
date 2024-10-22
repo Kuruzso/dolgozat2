@@ -8,5 +8,5 @@ public class Blogog
     public string Description { get; set; }
     public DateTime CreatedTime { get; set; }
 
-    public DateTime LastUpdate { get; set; }
+    public DateTime Lastupdated { get; set; }
     }

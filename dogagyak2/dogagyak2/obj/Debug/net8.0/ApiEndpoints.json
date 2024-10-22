@@ -18,5 +18,21 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "dogagyak2.Controllers.BlogController",
+    "Method": "Post",
+    "RelativePath": "Blogog",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "bloglista",
+        "Type": "dogagyak2.Models.Blogog",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
