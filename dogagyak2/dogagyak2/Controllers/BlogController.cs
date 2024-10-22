@@ -98,7 +98,7 @@ namespace dogagyak2.Controllers
 
             return Ok("siker");
         }
-        /*[HttpGet("{id}")]
+        [HttpGet("{id}")]
         public IActionResult Get(Guid id)
         {
 
@@ -124,6 +124,6 @@ namespace dogagyak2.Controllers
             conn.Connection.Close();
 
             return Ok(data);
-        }*/
+        }
     }
 }
