@@ -34,5 +34,26 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "dogagyak2.Controllers.BlogController",
+    "Method": "Put",
+    "RelativePath": "Blogog/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": true
+      },
+      {
+        "Name": "bloglista",
+        "Type": "dogagyak2.Models.Blogog",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

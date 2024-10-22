@@ -59,5 +59,25 @@ namespace dogagyak2.Controllers
 
             return Ok("siker");
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Put(Guid id,[FromBody] Blogog bloglista)
+        {
+
+
+            conn.Connection.Open();
+
+            string sql = "UPDATE `blogosok` SET Title = @Title, Description = @Description WHERE id = @id;";
+
+            MySqlCommand cmd = new MySqlCommand(sql, conn.Connection);
+            cmd.Parameters.AddWithValue("@id", id);
+            cmd.Parameters.AddWithValue("@Title", bloglista.Title);
+            cmd.Parameters.AddWithValue("@Description", bloglista.Description);
+
+            cmd.ExecuteNonQuery();
+            conn.Connection.Close();
+
+            return Ok("siker");
+        }
     }
 }
